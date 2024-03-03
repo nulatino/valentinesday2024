@@ -1,9 +1,10 @@
+/* Default styles */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(233, 48, 48);
+    background-color: #F88379;
 }
 
 .header_text {
@@ -17,18 +18,67 @@ body {
 }
 
 .gif_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 400px; /* Adjust width and height as needed */
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%; /* This creates the ellipse shape */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .form {
     font-size: 40px;
     color: white;
+    margin-left: 2rem;
+}
+.info {
+    font-size: 32px;
+    color: white;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    font-weight: 500; 
+}
+.info p{
+    margin: 1rem 0;
 }
 
 #input-name, #submit-button {
     border: none;
     border-radius: 5px;
     padding: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .gif_container {
+        width: 300px;
+        height: 600px;
+    }
+
+    .form {
+        font-size: 30px;
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .gif_container {
+        width: 250px;
+        height: 500px;
+    }
+
+    .form {
+        font-size: 24px;
+    }
 }
