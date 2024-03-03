@@ -17,7 +17,7 @@ body {
     height: 100%;
     object-fit: contain; /* Ensure the image covers the entire background */
     z-index: -1; /* Ensure it's behind the other content */
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 
